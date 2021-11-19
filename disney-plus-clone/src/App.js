@@ -11,6 +11,7 @@ function App() {
       />
       <MovieList title="Top Rated" fetchUrl={request.fetchTopRated} />
       <MovieList title="Trending now" fetchUrl={request.fetchTrending} />
+      <MovieList title="Star Wars" fetchUrl={request.fetchStarWars} />
     </div>
   );
 }
