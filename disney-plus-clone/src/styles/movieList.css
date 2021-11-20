@@ -2,6 +2,10 @@
   margin-left: 20px;
   color: white;
 }
+.movie__list h2 {
+  padding-top: 120px;
+}
+
 .movie__list__posters {
   display: flex;
   overflow-y: hidden;

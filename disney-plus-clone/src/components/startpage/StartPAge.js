@@ -1,25 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../avatar/Avatar";
 import { src } from "../avatar/avatarUrl";
 import "../../styles/startPage.css";
+import Logo from "../logo/Logo";
 
 const StartPage = () => {
+  const [isRender, setIsRender] = useState(false);
+  const handleClick = () => {
+    setIsRender(true);
+  };
   return (
-    <>
-      <>
-        <img
-          className="logo"
-          src="https://seeklogo.com/images/D/disney-logo-575AED0F1D-seeklogo.com.png"
-          alt="Disney Plus Logo Png Clipart@pikpng.com"
-        ></img>
-      </>
+    <div className="start__page">
       <h1>Who's watching?</h1>
       <div className="profile__page">
-        <Link to="/home">
+        <Link to="/home" onClick={handleClick}>
           <Avatar img={src.rob} name="Rob" />
         </Link>
-        <Link to="/home">
+        <Link to="/home" onClick={() => console.log(isRender)}>
           <Avatar img={src.nick} name="Nick" />
         </Link>
         <Link to="/home">
@@ -32,7 +30,7 @@ const StartPage = () => {
           <Avatar img={src.hyf} name="HYF" />
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
