@@ -1,17 +1,17 @@
 import "./App.css";
-import MovieList from "./components/movieList/MovieList";
-import request from "./requests/request";
+import Home from "./components/home/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import StartPage from "./components/startpage/StartPAge";
 
 function App() {
   return (
     <div className="App">
-      <MovieList
-        title="New on Disney+"
-        fetchUrl={request.fetchDisneyOriginals}
-      />
-      <MovieList title="Top Rated" fetchUrl={request.fetchTopRated} />
-      <MovieList title="Trending now" fetchUrl={request.fetchTrending} />
-      <MovieList title="Star Wars" fetchUrl={request.fetchStarWars} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<StartPage />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

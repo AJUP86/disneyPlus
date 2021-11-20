@@ -2,5 +2,10 @@
   margin: 0;
 }
 .App {
-  background-color: #111;
+  background-color: #1a1d29;
+  height: 100vh;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
