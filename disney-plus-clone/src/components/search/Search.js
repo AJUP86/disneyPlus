@@ -22,7 +22,7 @@ const Search = ({ query }) => {
       <div className="films__list">
         <div className="films__list__posters">
           {isLoading ? (
-            <h1>Loading...</h1>
+            <h1>What do you want to watch?</h1>
           ) : (
             data.map((movie) => (
               <img

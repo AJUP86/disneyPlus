@@ -16,7 +16,7 @@ function App() {
             <Route path="/" element={<StartPage />} />
             <Route path="/home" element={<Home />} />
             <Route
-              path="/:search"
+              path="/search"
               element={<Search query={request.fetchSearch} />}
             />
             <Route
