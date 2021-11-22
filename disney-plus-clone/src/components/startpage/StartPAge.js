@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Avatar from "../avatar/Avatar";
 import { src } from "../avatar/avatarUrl";
 import "../../styles/startPage.css";
-import Logo from "../logo/Logo";
 
 const StartPage = () => {
   const [isRender, setIsRender] = useState(false);

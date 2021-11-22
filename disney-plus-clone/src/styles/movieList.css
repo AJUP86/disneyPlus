@@ -1,12 +1,14 @@
 .movie__list {
-  margin-left: 20px;
+  background-color: #1a1d29;
   color: white;
 }
 .movie__list h2 {
+  margin-left: 20px;
   padding-top: 120px;
 }
 
 .movie__list__posters {
+  margin-left: 20px;
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -16,11 +18,12 @@
   display: none;
 }
 
-.movie__list__poster {
-  width: 300px;
-  max-height: 250px;
-  margin-right: 50px;
+.movie__list__posters .movie__list__poster {
+  width: 500px;
+  max-height: 300px;
+  margin-right: 60px;
   transition: transform 450ms;
+  border-radius: 5%;
 }
 
 .movie__list__poster:hover {

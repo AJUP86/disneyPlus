@@ -1,2 +1,2 @@
-const baseUrl = `https://api.themoviedb.org/3/`;
-export default baseUrl;
+const poster_Url = "https://image.tmdb.org/t/p/w500/";
+export default poster_Url;
