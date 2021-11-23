@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import poster_Url from "../../requests/baseUrl";
 import "../../styles/films.css";
+import movieTrailer from "movie-trailer";
+import Youtube from "react-youtube";
 
 const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
   const [disneyData, isLoading] = useFetch(disney);
@@ -10,6 +12,24 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
   const [marvelData, isLoading4] = useFetch(marvel);
   const [trendingData, isLoading5] = useFetch(trending);
   const [topRatedData, isLoading6] = useFetch(topRated);
+  const [trailerUrl, setTrailerUrl] = useState("");
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: { autoplay: 1 },
+  };
+  const handleClick = (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
+      movieTrailer(movie?.name || movie?.title)
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get("v"));
+        })
+        .catch((error) => console.log(error));
+    }
+  };
   return (
     <>
       <div className="films__list">
@@ -20,6 +40,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             disneyData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -27,7 +50,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
       <div className="films__list">
         <div className="films__list__posters">
@@ -37,6 +60,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             animationData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -44,7 +70,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
       <div className="films__list">
         <div className="films__list__posters">
@@ -54,6 +80,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             starWarsData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -61,7 +90,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
       <div className="films__list">
         <div className="films__list__posters">
@@ -71,6 +100,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             marvelData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -78,7 +110,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
       <div className="films__list">
         <div className="films__list__posters">
@@ -88,6 +120,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             trendingData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -95,7 +130,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
       <div className="films__list">
         <div className="films__list__posters">
@@ -105,6 +140,9 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             topRatedData.map((movie) => (
               <img
                 key={movie.id}
+                onClick={() => {
+                  handleClick(movie);
+                }}
                 className="films__list__poster"
                 src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
@@ -112,7 +150,7 @@ const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {
             ))
           )}
         </div>
-        {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
+        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
       </div>
     </>
   );
