@@ -6,6 +6,7 @@ import Nav from "./components/nav/Nav";
 import Search from "./components/search/Search";
 import Films from "./components/films/Films";
 import request from "../src/requests/request";
+import Series from "./components/series/Series";
 function App() {
   return (
     <>
@@ -29,6 +30,16 @@ function App() {
                   marvel={request.fetchMarvel}
                   trending={request.fetchTrending}
                   topRated={request.fetchTopRated}
+                />
+              }
+            />
+            <Route
+              path="/series"
+              element={
+                <Series
+                  disneyShow={request.fetchDisneyShows}
+                  star={request.fetchStarShows}
+                  natGeo={request.fetchNatGeo}
                 />
               }
             />

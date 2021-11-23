@@ -6,7 +6,6 @@ const useSearch = (url) => {
   const [search, setSearch] = useState("");
   const HandleSearch = (e) => {
     e.preventDefault(setSearch(e.target.value));
-    console.log(search);
   };
   const getFetch = async (e) => {
     e.preventDefault();
@@ -15,7 +14,6 @@ const useSearch = (url) => {
       `https://api.themoviedb.org/3/${url}${search}`
     );
     const data = await response.json();
-    console.log(data);
     setData(data.results);
     setIsLoading(false);
     return data;

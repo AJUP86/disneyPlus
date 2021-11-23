@@ -16,7 +16,7 @@ const MovieList = ({ title, fetchUrl }) => {
             <img
               key={movie.id}
               className="movie__list__poster"
-              src={`${poster_Url}${movie.poster_path}`}
+              src={`${poster_Url}${movie.poster_path || movie.backdrop_path}`}
               alt={movie.name || movie.title}
             />
           ))
