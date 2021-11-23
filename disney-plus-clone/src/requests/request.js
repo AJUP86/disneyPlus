@@ -1,7 +1,7 @@
 export const APY_KEY = `3aa5d17bb4eb238fb55f5e9e51ac7489`;
 const request = {
   //movies
-  fetchTrending: `discover/movie?api_key=${APY_KEY}&language=en-US&sort_by=vote_average.desc&with_companies=2`,
+  fetchTrending: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=2`,
   fetchDisneyOriginals: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=2`,
   fetchTopRated: `discover/movie?api_key=${APY_KEY}&language=en-US&sort_by=vote_count.desc&with_companies=2`,
   fetchAnimation: `discover/movie?api_key=${APY_KEY}&language=en-US&include_adult=false&include_video=false&page=1&with_companies=2&with_genres=16`,

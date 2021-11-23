@@ -20,8 +20,8 @@
 
 .movie__list__posters .movie__list__poster {
   width: 500px;
-  max-height: 300px;
-  margin-right: 60px;
+  max-height: 150px;
+  margin-right: 20px;
   transition: transform 450ms;
   border-radius: 5%;
 }

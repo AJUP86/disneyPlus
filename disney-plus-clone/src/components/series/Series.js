@@ -17,7 +17,7 @@ const Series = ({ disneyShow, star, natGeo }) => {
               <img
                 key={movie.id}
                 className="films__list__poster"
-                src={`${poster_Url}${movie.poster_path}`}
+                src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
               />
             ))
@@ -34,7 +34,7 @@ const Series = ({ disneyShow, star, natGeo }) => {
               <img
                 key={movie.id}
                 className="films__list__poster"
-                src={`${poster_Url}${movie.poster_path}`}
+                src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
               />
             ))
@@ -51,7 +51,7 @@ const Series = ({ disneyShow, star, natGeo }) => {
               <img
                 key={movie.id}
                 className="films__list__poster"
-                src={`${poster_Url}${movie.poster_path}`}
+                src={`${poster_Url}${movie?.backdrop_path}`}
                 alt={movie.name || movie.title}
               />
             ))

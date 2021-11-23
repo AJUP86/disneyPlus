@@ -1,10 +1,12 @@
 import React from "react";
 import MovieList from "../movieList/MovieList";
 import request from "../../requests/request";
+import Banner from "../banner/Banner";
 
 const Home = () => {
   return (
     <>
+      <Banner fetchUrl={request.fetchTopRated} />
       <MovieList
         title="New on Disney+"
         fetchUrl={request.fetchDisneyOriginals}

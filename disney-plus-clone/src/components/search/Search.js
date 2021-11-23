@@ -4,7 +4,8 @@ import poster_Url from "../../requests/baseUrl";
 import "../../styles/search.css";
 
 const Search = ({ query }) => {
-  const [data, isLoading, handlingSearch, getFetch, search] = useSearch(query);
+  const [data, isLoading, handlingSearch, getFetch, search, error] =
+    useSearch(query);
   return (
     <>
       <div>
@@ -21,9 +22,8 @@ const Search = ({ query }) => {
       </div>
       <div className="films__list">
         <div className="films__list__posters">
-          {isLoading ? (
-            <h1>What do you want to watch?</h1>
-          ) : (
+          {isLoading && <h1>What do you want to watch?</h1>}
+          {data.length > 0 ? (
             data.map((movie) => (
               <img
                 key={movie.id}
@@ -32,6 +32,8 @@ const Search = ({ query }) => {
                 alt={movie.name || movie.title}
               />
             ))
+          ) : (
+            <h2>{error}</h2>
           )}
         </div>
         {/*trailerUrl && <YouTube videoId={trailerUrl} opts={opts} >*/}
