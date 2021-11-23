@@ -1,0 +1,31 @@
+.movie__list {
+  background-color: #1a1d29;
+  color: white;
+}
+.movie__list h2 {
+  margin-left: 20px;
+  padding-top: 120px;
+}
+
+.movie__list__posters {
+  margin-left: 20px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.movie__list__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.movie__list__posters .movie__list__poster {
+  width: 500px;
+  max-height: 150px;
+  margin-right: 20px;
+  transition: transform 450ms;
+  border-radius: 5%;
+}
+
+.movie__list__poster:hover {
+  transform: scale(1.08);
+}

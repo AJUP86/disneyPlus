@@ -1,0 +1,27 @@
+.container {
+  background-color: #1a1d29;
+}
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 300px;
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  top: 100px;
+}
+.banner:hover {
+  border: 2px solid rgb(189, 186, 186);
+  border-radius: 0.8%;
+}
+.banner__contents {
+  margin-left: 30px;
+  padding-top: 75px;
+  height: 190px;
+}
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 3rem;
+  text-align: left;
+}

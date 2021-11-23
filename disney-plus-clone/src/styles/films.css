@@ -1,0 +1,27 @@
+.films__list {
+  background-color: #1a1d29;
+  color: white;
+  height: unset;
+  width: 100%;
+}
+
+.films__list__posters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.films__list__poster {
+  width: 200px;
+  max-height: 250px;
+  margin-top: 150px;
+  margin-right: 20px;
+  transition: transform 450ms;
+  border-radius: 5%;
+}
+
+.films__list__poster:hover {
+  transform: scale(1.08);
+}

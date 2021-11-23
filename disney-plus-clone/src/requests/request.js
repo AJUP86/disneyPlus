@@ -1,11 +1,18 @@
-const APY_KEY = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
+export const APY_KEY = `3aa5d17bb4eb238fb55f5e9e51ac7489`;
 const request = {
-  fetchTrending: `trending/all/week?api_key=${APY_KEY}&language=en-US`,
-  fetchNetflixOriginals: `discover/tv?api_key=${APY_KEY}&with_networks=213`,
-  fetchTopRated: `movie/top_rated?api_key=${APY_KEY}&language=en-US`,
-  fetchActionMovies: `discover/movie?api_key=${APY_KEY}&with_genres=28`,
-  fetchComedyMovies: `discover/movie?api_key=${APY_KEY}&with_genres=35`,
-  fetchHorrorMovies: `discover/movie?api_key=${APY_KEY}&with_genres=27`,
-  fetchRomanceMovies: `discover/movie?api_key=${APY_KEY}&with_genres=10749`,
-  fetchDocumentaries: `discover/movie?api_key=${APY_KEY}&with_genres=99`,
+  //movies
+  fetchTrending: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=2`,
+  fetchDisneyOriginals: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=2`,
+  fetchTopRated: `discover/movie?api_key=${APY_KEY}&language=en-US&sort_by=vote_count.desc&with_companies=2`,
+  fetchAnimation: `discover/movie?api_key=${APY_KEY}&language=en-US&include_adult=false&include_video=false&page=1&with_companies=2&with_genres=16`,
+  fetchStarWars: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=1`,
+  fetchPixar: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=3`,
+  fetchMarvel: `discover/movie?api_key=${APY_KEY}&language=en-US&with_companies=420`,
+  //search query
+  fetchSearch: `search/multi?api_key=${APY_KEY}&language=en-US&query=`,
+  //series
+  fetchDisneyShows: `discover/tv?api_key=${APY_KEY}&language=en-US&include_null_first_air_dates=false&with_companies=2`,
+  fetchStarShows: `discover/tv?api_key=${APY_KEY}&language=en-US&with_companies=25`,
+  fetchNatGeo: `discover/tv?api_key=${APY_KEY}&language=en-US&with_companies=7521`,
 };
+export default request;
