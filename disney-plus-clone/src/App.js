@@ -1,12 +1,12 @@
 import "./App.css";
-import Home from "./components/home/Home";
+import Home from "./pages/homePage/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StartPage from "./components/startpage/StartPAge";
+import StartPage from "./pages/startpage/StartPAge";
 import Nav from "./components/nav/Nav";
-import Search from "./components/search/Search";
-import Films from "./components/films/Films";
+import Search from "./pages/searchPage/Search";
+import Films from "./pages/filmsPage/Films";
 import request from "../src/requests/request";
-import Series from "./components/series/Series";
+import Series from "./pages/seriesPage/Series";
 function App() {
   return (
     <>

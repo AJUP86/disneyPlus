@@ -1,7 +1,7 @@
 import React from "react";
-import MovieList from "../movieList/MovieList";
+import MovieList from "../../components/movieList/MovieList";
 import request from "../../requests/request";
-import Banner from "../banner/Banner";
+import Banner from "../../components/banner/Banner";
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Avatar from "../avatar/Avatar";
-import { src } from "../avatar/avatarUrl";
+import Avatar from "../../components/avatar/Avatar";
+import { src } from "../../components/avatar/avatarUrl";
 import "../../styles/startPage.css";
 
 const StartPage = () => {
