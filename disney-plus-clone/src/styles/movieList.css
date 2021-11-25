@@ -2,6 +2,12 @@
   background-color: #1a1d29;
   color: white;
 }
+.list__films {
+  background-color: #1a1d29;
+  color: white;
+  height: unset;
+  width: 100%;
+}
 .movie__list h2 {
   margin-left: 20px;
   padding-top: 120px;
@@ -14,18 +20,59 @@
   overflow-x: scroll;
   padding: 20px;
 }
+.films {
+  background-color: rgb(26, 29, 41);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
 .movie__list__posters::-webkit-scrollbar {
   display: none;
 }
 
 .movie__list__posters .movie__list__poster {
-  width: 500px;
   max-height: 150px;
   margin-right: 20px;
   transition: transform 450ms;
-  border-radius: 5%;
+  /*taked from disneyplus*/
+  backface-visibility: hidden;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transform: scale(1, 1) translateZ(0px);
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.films .film {
+  width: 100%;
+  max-height: 250px;
+  margin-top: 150px;
+  margin-right: -20px;
+  transition: transform 450ms;
+  /*taked from disneyplus*/
+  backface-visibility: hidden;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  cursor: pointer;
+  position: relative;
+  transform: scale(1, 1) translateZ(0px);
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .movie__list__poster:hover {
+  transform: scale(1.08);
+}
+.film:hover {
   transform: scale(1.08);
 }
