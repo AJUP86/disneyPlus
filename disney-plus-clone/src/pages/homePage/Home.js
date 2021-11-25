@@ -1,25 +1,46 @@
 import React from "react";
 import MovieList from "../../components/movieList/MovieList";
-import request from "../../requests/request";
-import Banner from "../../components/banner/Banner";
 
-const Home = () => {
+import Banner from "../../components/banner/Banner";
+import request, { listNames } from "../../requests/request";
+import useFetch from "../../hooks/useFetch";
+
+const Home = ({
+  banner,
+  disney,
+  animation,
+  starWars,
+  marvel,
+  trending,
+  topRated,
+  shows,
+  pixar,
+  natGeo,
+  starShows,
+}) => {
+  const [disneyData] = useFetch(disney);
+  const [animationData] = useFetch(animation);
+  const [starWarsData] = useFetch(starWars);
+  const [marvelData] = useFetch(marvel);
+  const [trendingData] = useFetch(trending);
+  const [topRatedData] = useFetch(topRated);
+  const [showsData] = useFetch(shows);
+  const [pixarData] = useFetch(pixar);
+  const [natGeoData] = useFetch(natGeo);
+  const [starShowsData] = useFetch(starShows);
   return (
     <>
-      <Banner fetchUrl={request.fetchTopRated} />
-      <MovieList
-        title="New on Disney+"
-        fetchUrl={request.fetchDisneyOriginals}
-      />
-      <MovieList title="Top Rated" fetchUrl={request.fetchTopRated} />
-      <MovieList title="Trending now" fetchUrl={request.fetchTrending} />
-      <MovieList title="Shows" fetchUrl={request.fetchDisneyShows} />
-      <MovieList title="Pixar" fetchUrl={request.fetchPixar} />
-      <MovieList title="Star shows" fetchUrl={request.fetchStarShows} />
-      <MovieList title="Star Wars" fetchUrl={request.fetchStarWars} />
-      <MovieList title="Marvel Universe" fetchUrl={request.fetchMarvel} />
-      <MovieList title="Animation" fetchUrl={request.fetchAnimation} />
-      <MovieList title="Nat Geo Shows" fetchUrl={request.fetchNatGeo} />
+      <Banner fetchUrl={banner} />
+      <MovieList title={listNames.disney} data={disneyData} />
+      <MovieList title={listNames.topRated} data={topRatedData} />
+      <MovieList title={listNames.trendingNow} data={trendingData} />
+      <MovieList title={listNames.shows} data={showsData} />
+      <MovieList title={listNames.pixar} data={pixarData} />
+      <MovieList title={listNames.starShows} data={starShowsData} />
+      <MovieList title={listNames.starWars} data={starWarsData} />
+      <MovieList title={listNames.marvel} data={marvelData} />
+      <MovieList title={listNames.animation} data={animationData} />
+      <MovieList title={listNames.natGeo} data={natGeoData} />
     </>
   );
 };

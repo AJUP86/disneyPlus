@@ -15,4 +15,17 @@ const request = {
   fetchStarShows: `discover/tv?api_key=${APY_KEY}&language=en-US&with_companies=25`,
   fetchNatGeo: `discover/tv?api_key=${APY_KEY}&language=en-US&with_companies=7521`,
 };
+
+export const listNames = {
+  disney: "New on Disney+",
+  topRated: "Top Rated",
+  trendingNow: "Trending now",
+  starShows: "Star shows",
+  pixar: "Pixar",
+  shows: "Shows",
+  starWars: "Star Wars",
+  marvel: "Marvel Universe",
+  animation: "Animation",
+  natGeo: "Nat Geo Shows",
+};
 export default request;

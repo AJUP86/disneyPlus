@@ -1,52 +1,39 @@
-import React, { useState } from "react";
-import useFetch from "../../hooks/useFetch";
+import React, { useContext } from "react";
 import poster_Url from "../../requests/baseUrl";
-import movieTrailer from "movie-trailer";
-import Youtube from "react-youtube";
 import "../../styles/movieList.css";
+import { Link, useLocation } from "react-router-dom";
+import { YoutubeContext } from "../../context/YoutubeContext";
 
-const MovieList = ({ title, fetchUrl }) => {
-  const [data, isLoading] = useFetch(fetchUrl);
-  const [trailerUrl, setTrailerUrl] = useState("");
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: { autoplay: 1 },
-  };
-  const handleClick = (movie) => {
-    if (trailerUrl) {
-      setTrailerUrl("");
-    } else {
-      movieTrailer(movie?.name || movie?.title)
-        .then((url) => {
-          const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get("v"));
-        })
-        .catch((error) => console.log(error));
-    }
-  };
+const MovieList = ({ title, data }) => {
+  const { handleClick } = useContext(YoutubeContext);
+  const { pathname } = useLocation();
 
   return (
     <div className="movie__list">
-      <h2>{title}</h2>
-      <div className="movie__list__posters">
-        {isLoading ? (
-          <h1>Loading...</h1>
-        ) : (
+      {title && <h2>{title}</h2>}
+      <div className={pathname === "/films" ? "films" : "movie__list__posters"}>
+        {data ? (
           data.map((movie) => (
-            <img
-              key={movie.id}
+            <Link
+              to={`/${movie?.name || movie?.title}`}
               onClick={() => {
                 handleClick(movie);
               }}
-              className="movie__list__poster"
-              src={`${poster_Url}${movie.backdrop_path}`}
-              alt={movie.name || movie.title}
-            />
+              key={movie.id}
+            >
+              <img
+                className={
+                  pathname === "/films" ? "film" : "movie__list__poster"
+                }
+                src={`${poster_Url}${movie.backdrop_path}`}
+                alt={movie.name || movie.title}
+              />
+            </Link>
           ))
+        ) : (
+          <h2>Loading...</h2>
         )}
       </div>
-      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
     </div>
   );
 };

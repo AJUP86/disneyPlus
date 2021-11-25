@@ -1,0 +1,10 @@
+.trailer__container {
+  padding-top: 200px;
+  text-align: center;
+}
+.trailer__container button {
+  background-color: rgb(100, 103, 105);
+  font-size: 2em;
+  font-weight: 800;
+  cursor: pointer;
+}
