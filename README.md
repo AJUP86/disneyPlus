@@ -4,9 +4,9 @@ Mock of Disney pluslayout<br>
 <br>
 Here i want to present my first attempt to clone disneyplus app using react.js<br>
 <br>
-**DEMO**<br>
+__DEMO__<br>
 <br>
-https://objective-bose-12044d.netlify.app/search
+https://epic-rosalind-faa474.netlify.app/
 
 I created disney plus web app aparience using react.<br>
 <br>
