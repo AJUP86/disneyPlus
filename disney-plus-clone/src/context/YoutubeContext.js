@@ -1,6 +1,5 @@
 import React, { useState, createContext } from "react";
 import movieTrailer from "movie-trailer";
-import { useLocation } from "react-router";
 export const YoutubeContext = createContext();
 
 const YoutubeProvider = ({ children }) => {

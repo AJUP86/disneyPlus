@@ -1,8 +1,7 @@
 import React from "react";
 import MovieList from "../../components/movieList/MovieList";
-
 import Banner from "../../components/banner/Banner";
-import request, { listNames } from "../../requests/request";
+import { listNames } from "../../requests/request";
 import useFetch from "../../hooks/useFetch";
 
 const Home = ({

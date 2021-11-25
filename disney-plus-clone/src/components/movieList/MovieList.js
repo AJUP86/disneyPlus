@@ -9,9 +9,21 @@ const MovieList = ({ title, data }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className="movie__list">
+    <div
+      className={
+        pathname === "/films" || pathname === "/series"
+          ? "films"
+          : "movie__list"
+      }
+    >
       {title && <h2>{title}</h2>}
-      <div className={pathname === "/films" ? "films" : "movie__list__posters"}>
+      <div
+        className={
+          pathname === "/films" || pathname === "/series"
+            ? "films"
+            : "movie__list__posters"
+        }
+      >
         {data ? (
           data.map((movie) => (
             <Link
@@ -23,7 +35,9 @@ const MovieList = ({ title, data }) => {
             >
               <img
                 className={
-                  pathname === "/films" ? "film" : "movie__list__poster"
+                  pathname === "/films" || pathname === "/series"
+                    ? "film"
+                    : "movie__list__poster"
                 }
                 src={`${poster_Url}${movie.backdrop_path}`}
                 alt={movie.name || movie.title}

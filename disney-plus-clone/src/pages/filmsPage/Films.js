@@ -1,6 +1,5 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import "../../styles/films.css";
 import MovieList from "../../components/movieList/MovieList";
 
 const Films = ({ disney, animation, starWars, marvel, trending, topRated }) => {

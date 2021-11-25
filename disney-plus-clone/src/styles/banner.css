@@ -4,14 +4,16 @@
 .banner {
   color: white;
   object-fit: contain;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   height: 300px;
+
   width: 90%;
   margin-left: 5%;
   position: relative;
   top: 100px;
 }
 .banner:hover {
-  border: 2px solid rgb(189, 186, 186);
   border-radius: 0.8%;
 }
 .banner__contents {
