@@ -38,12 +38,12 @@ client<br>
    <br>
    <br>
    
-*components: in this folder are paced all the elemenes that need to be render 
-*context: in here i store functions handlers and states, from here is te logic sended to each component to set behavior of them. 
-*hooks: All my fetch calls to the api are storages here.
-*pages: those are parent components 
-*requests : objects and functions for completing the api request. 
-*styles: in this folder i have all styling of our Disney + app.
+*components: in this folder are paced all the elemenes that need to be render<br>
+*context: in here i store functions handlers and states, from here is te logic sended to each component to set behavior of them. <br>
+*hooks: All my fetch calls to the api are storages here.<br>
+*pages: those are parent components. <br>
+*requests : objects and functions for completing the api request. <br>
+*styles: in this folder i have all styling of our Disney + app.<br>
 
 I hope you enjoy my app
 
