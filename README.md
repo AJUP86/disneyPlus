@@ -1,33 +1,51 @@
-# disneyPlus App
+# My version of Disney + App
 <br>
-Mock of Disney pluslayout<br>
+Description 
 <br>
-Here i want to present my first attempt to clone disneyplus app using react.js<br>
+Welcome to my Disney + app repository, in this version the user will be able to navigate through all routes inside of it, he or she will be able to go from the start page to the home page, from here the users can acces to a navigation bar where they will find a list of links(home, search, films, series and an avatar example to go back to the start page) each of them is functional.<br>
+The user is  able to go through the movies and series through the home page but also to find a movie or a tv show from the search page, as well as get access to a pure list of movies(films) and also a pure list of tv shows(series), to make my app something enjoyable, I recreate the experience of click on any movie thumbnail and be redirected to a dynamic endpoint to watch a youtube trailer of the clicked movie, besides there is a button who takes you to the home page whenever the user wants it.<br>
+<br>
 <br>
 __DEMO__<br>
 <br>
 https://epic-rosalind-faa474.netlify.app/
 
-I created disney plus web app aparience using react.<br>
-<br>
-**It will display movies and series and you will be able to search them with a client- side router structure , this will be the following**<br>
-domain/ : start page<br>
-domain/home: initial page of disney plus<br>
-domain/search: searched by name or genre<br>
-domain/movies: all movies will be here<br>
-domain/series: all shows will be here<br>
-<br>
-<br>
-**need to have**<br>
-<br>
-<br>
-*all routes<br>
-<br>
-<br>
-*user will be able to navigate the page by clicking movies or categories in the nav bar<br>
-<br>
-*the content in my homepage components would be links to its main containers (/movies or /series)<br>
-<br>
-**nice to have**<br>
-<br>
-*movies will take you to a dynamic end point where you will be able to see the youtube trailer without going to youtube page.
+__SetUp__
+
+I am pretty aware that the time you are investing on taking me in consideration for a job as a developer is presous, that is why I arrange everithing on in this project to be as efficient as posible. Instead of make you create an `.env` file and go the api site  and sing in and finally got a key to check on my project you will be only instaling npm in the cloned Repo.<br>
+
+1. Clone the repo DisneyPlus. 
+2. Change directory to disney-plus-clone folder 
+3. Run `npm i` (make sure you are in the right directory
+4. Enjoy with my my version of Disney + 
+
+
+__Client Structure__
+
+client
+|__Public
+|__src
+   |__components
+   |__context
+   |__hooks
+   |__pages
+   |__requests
+   |__styles
+   
+   <br>
+   <br>
+   
+*components: in this folder are paced all the elemenes that need to be render 
+*context: in here i store functions handlers and states, from here is te logic sended to each component to set behavior of them. 
+*hooks: All my fetch calls to the api are storages here.
+*pages: those are parent components 
+*requests : objects and functions for completing the api request. 
+*styles: in this folder i have all styling of our Disney + app.
+
+I hope you enjoy my app
+
+Alejandro Urroz
+full-stack web developer
+email: alejandrourroz86@gmail.com 
+cv : https://docs.google.com/presentation/d/1680WnDmoOYz39hNS0QHHr-5YDuMN5dOYeuUCOIG7ZGY/edit?usp=sharing 
+
