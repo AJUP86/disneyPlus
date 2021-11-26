@@ -22,15 +22,15 @@ I am pretty aware that the time you are investing on taking me in consideration 
 
 __Client Structure__
 
-client
-|__Public
-|__src
-   |__components
-   |__context
-   |__hooks
-   |__pages
-   |__requests
-   |__styles
+client<br>
+|__Public<br>
+|__src<br>
+   |__components<br>
+   |__context<br>
+   |__hooks<br>
+   |__pages<br>
+   |__requests<br>
+   |__styles<br>
    
    <br>
    <br>
