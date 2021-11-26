@@ -6,7 +6,10 @@ Welcome to my Disney + app repository, in this version the user will be able to 
 The user is  able to go through the movies and series through the home page but also to find a movie or a tv show from the search page, as well as get access to a pure list of movies(films) and also a pure list of tv shows(series), to make my app something enjoyable, I recreate the experience of click on any movie thumbnail and be redirected to a dynamic endpoint to watch a youtube trailer of the clicked movie, besides there is a button who takes you to the home page whenever the user wants it.<br>
 <br>
 <br>
-__DEMO__ <br>
+
+__DEMO__
+
+
 <br>
 https://epic-rosalind-faa474.netlify.app/
 
